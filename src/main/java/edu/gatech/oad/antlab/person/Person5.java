@@ -29,9 +29,8 @@ public class Person5 {
 	 * @param input the string to be modified
 	 * @return the modified string
 	 */
-	private String calc(String input) {
-	  //Person 5 put your implementation here
-	  return null;
+	private static String calc(String input) {
+	  return input.substring(2, input.length()) + input.substring(0, 2);
 	}
 	
 	/**
@@ -45,5 +44,4 @@ public class Person5 {
 	public String toString(String input) {
 	  return name + calc(input);
 	}
-
 }
