@@ -3,11 +3,14 @@ package edu.gatech.oad.antlab.person;
 /**
  *  A simple class for person 2
  *  returns their name and a
- *  modified string 
+ *  modified string
  *
- * @author Bob
+ * @author Matthew Dozer
  * @version 1.1
  */
+
+
+
 public class Person2 {
     /** Holds the persons real name */
     private String name;
@@ -16,6 +19,7 @@ public class Person2 {
 	 * name
 	 * @param pname the person's real name
 	 */
+
 	 public Person2(String pname) {
 	   name = pname;
 	 }
@@ -30,15 +34,23 @@ public class Person2 {
 	 * @return the modified string
 	 */
 	private String calc(String input) {
-	  //Person 2 put your implementation here
-	  return null;
+		StringBuilder old = new StringBuilder(input);
+		StringBuilder sbresult = new StringBuilder(input);
+		for (int i = 0; i <= input.length(); i++) {
+			int index = (int) (Math.random() * old.length());
+			sbresult.append(old.charAt(index));
+			old.deleteCharAt(index);
+		}
+		String result = sbresult.toString();
+		System.out.println(result);
+	  	return result;
 	}
 	/**
 	 * Return a string rep of this object
 	 * that varies with an input string
 	 *
 	 * @param input the varying string
-	 * @return the string representing the 
+	 * @return the string representing the
 	 *         object
 	 */
 	public String toString(String input) {

@@ -1,0 +1,18 @@
+defaultTasks 'clean';
+apply plugin: 'java';
+repositories {
+   mavenCentral();
+   flatDir {
+       dirs 'lib';
+   }
+}
+
+dependencies {
+    compile name: 'resources';
+    compile group: 'commons-collections', name: 'commons-collections', version: '3.2';
+    testCompile group: 'junit', name: 'junit', version: '4.+';
+}
+
+task javaCompile {
+    assemble;
+}
