@@ -13,5 +13,4 @@ dependencies {
 jar {
   from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
   manifest { attributes 'Main-Class': 'src.main.java.edu.gatech.oad.antlab.pkg1.AntLabMain' }
-  //basename 'mloo3'
 }
