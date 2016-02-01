@@ -36,13 +36,12 @@ public class Person2 {
 	private String calc(String input) {
 		StringBuilder old = new StringBuilder(input);
 		StringBuilder sbresult = new StringBuilder(input);
-		for (int i = 0; i <= input.length(); i++) {
+		while (old.length() != 0) {
 			int index = (int) (Math.random() * old.length());
 			sbresult.append(old.charAt(index));
 			old.deleteCharAt(index);
 		}
 		String result = sbresult.toString();
-		System.out.println(result);
 	  	return result;
 	}
 	/**
